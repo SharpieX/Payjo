@@ -28,7 +28,7 @@ class AppComponent extends Component {
     };
 
     handleAddEvent(product) {
-        var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(40);
+        var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
         product.id = id
         this.state.products.push(product);
         localStorage.setItem('products', JSON.stringify(this.state.products));
